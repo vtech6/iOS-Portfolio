@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         return ZStack {
-            RoundedRectangle(cornerRadius: 30)
+            RoundedRectangle(cornerRadius: 0)
                 .edgesIgnoringSafeArea(.all)
                 .foregroundColor(Color.gray)
             VStack(spacing: 10){
