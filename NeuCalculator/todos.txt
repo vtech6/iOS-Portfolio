@@ -1,0 +1,6 @@
+Todos:
+- work on better colour palette
+- fix the bug with consecutive functions
+- add more functions
+- add iPad compatibility
+- rewrite the whole scheme in UIKit for practice
