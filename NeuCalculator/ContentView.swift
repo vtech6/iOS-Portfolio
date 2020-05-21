@@ -18,9 +18,11 @@ struct ContentView: View {
     
     var body: some View {
         return ZStack {
-            RoundedRectangle(cornerRadius: 0)
+            Text("")
+                .frame(width: screen.width, height: screen.height*1.5)
+                .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.4402813315, green: 0.4376685023, blue: 0.4422926307, alpha: 1)),Color(#colorLiteral(red: 0.4990558624, green: 0.4970183372, blue: 0.5346681476, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .edgesIgnoringSafeArea(.all)
-                .foregroundColor(Color.gray)
+                
             VStack(spacing: 10){
                 Text("\(currentNumber)")
                 .font(.system(size: 50))
@@ -158,11 +160,13 @@ struct DigitView: View {
     @State var digit: Int
     var body: some View {
         ZStack {
-            Circle()
-                .foregroundColor(Color(#colorLiteral(red: 0.7390441298, green: 0.7346524596, blue: 0.7424209714, alpha: 1)))
+            Text(" ")
+            .frame(width: buttonSize[0], height: buttonSize[0])
+            .background(RadialGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6854407191, green: 0.6896297336, blue: 0.7429966331, alpha: 0.7787885274)), Color(#colorLiteral(red: 0.5935800672, green: 0.6000974774, blue: 0.6542025805, alpha: 0.6797677654))]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 50))
+            .clipShape(Circle())
                 .shadow(color: Color.white.opacity(0.35), radius: 6, x: -4, y: -4)
                 .shadow(color: Color.black.opacity(0.35), radius: 6, x: 4, y: 4)
-                .frame(width: buttonSize[0], height: buttonSize[0])
+        
             
             
             Button(action: {
@@ -188,11 +192,13 @@ struct ZeroView: View {
     @State var digit: Int
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: .infinity)
-                .foregroundColor(Color(#colorLiteral(red: 0.7390441298, green: 0.7346524596, blue: 0.7424209714, alpha: 1)))
+            Text(" ")
+                .frame(width: buttonSize[0]*4.2, height: buttonSize[0]*0.9)
+                .background(RadialGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6854407191, green: 0.6896297336, blue: 0.7429966331, alpha: 0.7787885274)), Color(#colorLiteral(red: 0.5935800672, green: 0.6000974774, blue: 0.6542025805, alpha: 0.6797677654))]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 300))
+                .clipShape(RoundedRectangle(cornerRadius: .infinity))
                 .shadow(color: Color.white.opacity(0.35), radius: 6, x: -4, y: -4)
                 .shadow(color: Color.black.opacity(0.35), radius: 6, x: 4, y: 4)
-                .frame(width: buttonSize[0]*4.2, height: buttonSize[0]*0.9)
+                
             
             
             Button(action: {
@@ -213,34 +219,6 @@ struct ZeroView: View {
     }
 }
 
-struct MiscView: View {
-    @Binding var currentNumber: String
-    @State var digit: Int
-    var body: some View {
-        ZStack {
-            Circle()
-                .foregroundColor(Color(#colorLiteral(red: 0.8426927924, green: 0.8376840949, blue: 0.8465434909, alpha: 0.6571061644)))
-                .shadow(color: Color.white.opacity(0.35), radius: 6, x: -4, y: -4)
-                .shadow(color: Color.black.opacity(0.35), radius: 6, x: 4, y: 4)
-                .frame(width: buttonSize[0], height: buttonSize[0])
-            
-            
-            Button(action: {
-                
-                if self.currentNumber=="0"{
-                    self.currentNumber = String(self.digit)
-                }else{
-                    self.currentNumber += String(self.digit)
-                }
-            }
-            ){
-                Text(String(self.digit))
-                    .font(.system(size: 50))
-                    .foregroundColor(.black)
-                    .frame(width: buttonSize[1], height: buttonSize[1])
-            }
-        }
-    }
-}
+
 
 var buttonSize: [CGFloat] = [58, 43]
