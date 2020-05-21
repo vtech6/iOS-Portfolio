@@ -127,8 +127,9 @@ struct ContentView: View {
                         Spacer()
                         Button(action: {
                             self.currentNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
-                            if self.currentNumber == "0.0"{
-                                self.currentNumber = "0"
+                            
+                            if self.currentNumber.hasSuffix(".0"){
+                                self.currentNumber.removeLast(2)
                             }
                             
                         }){
