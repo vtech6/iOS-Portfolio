@@ -43,10 +43,16 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        Button(action:{
+                        Button(action:{if self.funcMode{
+                                    self.previousNumber = String(equals(functionName: "power", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                                    self.currentNumber = "0"
+                                    self.currentFunction = "power"
+                        }else{
                             self.previousNumber = self.currentNumber
                             self.currentNumber="0"
                             self.currentFunction = "power"
+                            self.funcMode.toggle()
+                            }
                         })
                         {SymbolView(symbolString: "^")}
                         Spacer()
@@ -57,11 +63,16 @@ struct ContentView: View {
                         {SymbolView(symbolString: "%")}
                         
                         Spacer()
-                        Button(action:{
+                        Button(action:{if self.funcMode{
+                                    self.previousNumber = String(equals(functionName: "divide", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                                    self.currentNumber = "0"
+                                    self.currentFunction = "divide"
+                        }else{
                             self.previousNumber = self.currentNumber
                             self.currentNumber = "0"
                             self.currentFunction = "divide"
-                            
+                            self.funcMode.toggle()
+                            }
                         })
                         {ButtonView(iconName: "divide")}
                     }
@@ -74,9 +85,16 @@ struct ContentView: View {
                         DigitView(currentNumber: $currentNumber, digit: 3)
                         Spacer()
                         Button(action:{
+                            if self.funcMode{
+                                    self.previousNumber = String(equals(functionName: "multiply", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                                    self.currentNumber = "0"
+                                    self.currentFunction = "multiply"
+                            }else{
                             self.previousNumber = self.currentNumber
                             self.currentNumber = "0"
                             self.currentFunction = "multiply"
+                                self.funcMode.toggle()
+                            }
                         })
                         {
                             ButtonView(iconName: "multiply")
