@@ -44,7 +44,7 @@ struct ContentView: View {
                         Spacer()
                         
                         Button(action:{if self.funcMode{
-                                    self.previousNumber = String(equals(functionName: "power", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                            self.previousNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
                                     self.currentNumber = "0"
                                     self.currentFunction = "power"
                         }else{
@@ -64,7 +64,7 @@ struct ContentView: View {
                         
                         Spacer()
                         Button(action:{if self.funcMode{
-                                    self.previousNumber = String(equals(functionName: "divide", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                            self.previousNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
                                     self.currentNumber = "0"
                                     self.currentFunction = "divide"
                         }else{
@@ -86,7 +86,7 @@ struct ContentView: View {
                         Spacer()
                         Button(action:{
                             if self.funcMode{
-                                    self.previousNumber = String(equals(functionName: "multiply", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                                self.previousNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
                                     self.currentNumber = "0"
                                     self.currentFunction = "multiply"
                             }else{
@@ -110,7 +110,7 @@ struct ContentView: View {
                         DigitView(currentNumber: $currentNumber, digit: 6)
                         Spacer()
                         Button(action: {if self.funcMode{
-                                self.previousNumber = String(equals(functionName: "sum", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                            self.previousNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
                                 self.currentNumber = "-"
                                 self.currentFunction = "sum"
                         }else{
@@ -134,7 +134,7 @@ struct ContentView: View {
                         DigitView(currentNumber: $currentNumber, digit: 9)
                         Spacer()
                         Button(action: {if self.funcMode{
-                            self.previousNumber = String(equals(functionName: "sum", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                            self.previousNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
                             self.currentNumber = "0"
                             self.currentFunction = "sum"
                         }else{
