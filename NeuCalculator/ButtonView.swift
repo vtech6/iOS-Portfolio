@@ -51,7 +51,7 @@ struct SymbolView: View {
             
             Text("\(symbolString)")
                 .font(.system(size: 50))
-                .foregroundColor(.black)
+                .foregroundColor(primary)
                 .frame(width: buttonSize[1], height: buttonSize[1])
                 
             .foregroundColor(primary)

@@ -27,8 +27,14 @@ func multiply (a: Float64, b: Float64) -> Float64 {
 func clear () -> Float64{
     return 0
 }
-func power (a: Float64, b: Float64) ->Float64{
+func power (a: Float64, b: Float64) -> Float64 {
     return pow(a, b)
+}
+
+func percent (a: String) -> Float64 {
+    var percentage = Float64(a)
+    percentage = percentage!/100
+    return percentage ?? 0
 }
 
 let allFunctions = [sum, subtract, divide, multiply]

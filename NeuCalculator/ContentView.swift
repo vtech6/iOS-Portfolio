@@ -50,13 +50,10 @@ struct ContentView: View {
                         Spacer()
                         
                         Button(action:{
-                            self.previousNumber = self.currentNumber
-                            if !self.currentNumber.contains("."){self.currentNumber+="."}
+                            self.currentNumber = String(percent(a: self.currentNumber))
                         })
-                        {
-                            SymbolView(symbolString: ".")
-                            
-                        }
+                        {SymbolView(symbolString: "%")}
+                        
                         Spacer()
                         Button(action:{
                             self.previousNumber = self.currentNumber
@@ -124,7 +121,13 @@ struct ContentView: View {
                         
                         ZeroView(currentNumber: $currentNumber, digit: 0)
                         Spacer()
-                        
+                        Button(action:{
+                            if !self.currentNumber.contains("."){self.currentNumber+="."}
+                        })
+                        {
+                            SymbolView(symbolString: ".")
+                            
+                        }
                         
                         Spacer()
                         Button(action: {
@@ -180,7 +183,7 @@ struct DigitView: View {
             ){
                 Text(String(self.digit))
                     .font(.system(size: 50))
-                    .foregroundColor(.black)
+                    .foregroundColor(primary)
                     .frame(width: buttonSize[1], height: buttonSize[1])
             }
         }
@@ -193,7 +196,7 @@ struct ZeroView: View {
     var body: some View {
         ZStack {
             Text(" ")
-                .frame(width: buttonSize[0]*4.2, height: buttonSize[0]*0.9)
+                .frame(width: buttonSize[0]*2.7, height: buttonSize[0]*0.9)
                 .background(RadialGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6854407191, green: 0.6896297336, blue: 0.7429966331, alpha: 0.7787885274)), Color(#colorLiteral(red: 0.5935800672, green: 0.6000974774, blue: 0.6542025805, alpha: 0.6797677654))]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 300))
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
                 .shadow(color: Color.white.opacity(0.35), radius: 6, x: -4, y: -4)
@@ -212,7 +215,7 @@ struct ZeroView: View {
             ){
                 Text(String(self.digit))
                     .font(.system(size: 50))
-                    .foregroundColor(.black)
+                    .foregroundColor(primary)
                     .frame(width: buttonSize[1], height: buttonSize[1])
             }
         }
