@@ -27,6 +27,7 @@ func multiply (a: Float64, b: Float64) -> Float64 {
 func clear () -> Float64{
     return 0
 }
+
 func power (a: Float64, b: Float64) -> Float64 {
     return pow(a, b)
 }

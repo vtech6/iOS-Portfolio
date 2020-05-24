@@ -62,8 +62,6 @@ struct ContentView: View {
                             
                         })
                         {ButtonView(iconName: "divide")}
-                        
-                        
                     }
                     Spacer()
                     HStack{

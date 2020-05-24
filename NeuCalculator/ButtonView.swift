@@ -15,8 +15,6 @@ struct ButtonView: View {
     @State var iconName = "plus"
     var body: some View {
         ZStack {
-            
-            
             Circle()
                 .frame(width: buttonSize[0], height: buttonSize[0])
                 .foregroundColor(secondary)
@@ -31,8 +29,6 @@ struct ButtonView: View {
             .foregroundColor(primary)
             .shadow(color: Color.white.opacity(0.2), radius: 7, x: -4, y: -4)
             .shadow(color: Color.black.opacity(0.3), radius: 7, x: 4, y: 3)
-            
-            
         }
         
     }
