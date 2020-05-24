@@ -15,6 +15,8 @@ struct ContentView: View {
     @State var currentNumber = "0"
     @State var previousNumber = "0"
     @State var nextNumber = "0"
+    @State var funcMode = false
+    @State var memory = ""
     
     var body: some View {
         return ZStack {
@@ -22,10 +24,10 @@ struct ContentView: View {
                 .frame(width: screen.width, height: screen.height*1.5)
                 .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.4402813315, green: 0.4376685023, blue: 0.4422926307, alpha: 1)),Color(#colorLiteral(red: 0.4990558624, green: 0.4970183372, blue: 0.5346681476, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .edgesIgnoringSafeArea(.all)
-                
+            
             VStack(spacing: 10){
                 Text("\(currentNumber)")
-                .font(.system(size: 50))
+                    .font(.system(size: 50))
                 Spacer()
                 VStack (spacing: 6){
                     
@@ -36,7 +38,7 @@ struct ContentView: View {
                         Button(action:{
                             self.currentNumber = "0"
                             self.previousNumber = "0"
-                            })
+                        })
                         {SymbolView(symbolString: "C")}
                         
                         Spacer()
@@ -89,10 +91,17 @@ struct ContentView: View {
                         Spacer()
                         DigitView(currentNumber: $currentNumber, digit: 6)
                         Spacer()
-                        Button(action: {
+                        Button(action: {if self.funcMode{
+                                self.previousNumber = String(equals(functionName: "sum", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                                self.currentNumber = "-"
+                                self.currentFunction = "sum"
+                        }else{
+                            
                             self.previousNumber = self.currentNumber
-                            self.currentNumber = "0"
-                            self.currentFunction = "subtract"
+                            self.currentNumber = "-"
+                            self.currentFunction = "sum"
+                            self.funcMode.toggle()
+                            }
                         }){
                             ButtonView(iconName: "minus")
                         }
@@ -106,10 +115,16 @@ struct ContentView: View {
                         Spacer()
                         DigitView(currentNumber: $currentNumber, digit: 9)
                         Spacer()
-                        Button(action: {
+                        Button(action: {if self.funcMode{
+                            self.previousNumber = String(equals(functionName: "sum", integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
+                            self.currentNumber = "0"
+                            self.currentFunction = "sum"
+                        }else{
                             self.previousNumber = self.currentNumber
                             self.currentNumber = "0"
                             self.currentFunction = "sum"
+                            self.funcMode.toggle()
+                            }
                         }){
                             ButtonView(iconName: "plus")
                         }
@@ -129,6 +144,9 @@ struct ContentView: View {
                         
                         Spacer()
                         Button(action: {
+                            if self.funcMode{
+                                self.funcMode.toggle()
+                            }
                             self.currentNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
                             
                             if self.currentNumber.hasSuffix(".0"){
@@ -162,12 +180,12 @@ struct DigitView: View {
     var body: some View {
         ZStack {
             Text(" ")
-            .frame(width: buttonSize[0], height: buttonSize[0])
-            .background(RadialGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6854407191, green: 0.6896297336, blue: 0.7429966331, alpha: 0.7787885274)), Color(#colorLiteral(red: 0.5935800672, green: 0.6000974774, blue: 0.6542025805, alpha: 0.6797677654))]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 50))
-            .clipShape(Circle())
+                .frame(width: buttonSize[0], height: buttonSize[0])
+                .background(RadialGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6854407191, green: 0.6896297336, blue: 0.7429966331, alpha: 0.7787885274)), Color(#colorLiteral(red: 0.5935800672, green: 0.6000974774, blue: 0.6542025805, alpha: 0.6797677654))]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 50))
+                .clipShape(Circle())
                 .shadow(color: Color.white.opacity(0.35), radius: 6, x: -4, y: -4)
                 .shadow(color: Color.black.opacity(0.35), radius: 6, x: 4, y: 4)
-        
+            
             
             
             Button(action: {
@@ -199,7 +217,7 @@ struct ZeroView: View {
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
                 .shadow(color: Color.white.opacity(0.35), radius: 6, x: -4, y: -4)
                 .shadow(color: Color.black.opacity(0.35), radius: 6, x: 4, y: 4)
-                
+            
             
             
             Button(action: {
@@ -214,7 +232,7 @@ struct ZeroView: View {
                 Text(String(self.digit))
                     .font(.system(size: 50))
                     .foregroundColor(primary)
-                    .frame(width: buttonSize[1], height: buttonSize[1])
+                    .frame(width: buttonSize[0]*2.7, height: buttonSize[1])
             }
         }
     }
