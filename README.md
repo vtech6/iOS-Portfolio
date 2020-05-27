@@ -6,7 +6,7 @@ Adjusted both for newer and older iphone models.
 ![New iPhone Design](https://imgur.com/download/raOvlp4)
 ![Old iPhone Design](https://imgur.com/download/IstEwfw)
 
-<h1>Dark Souls Lorebook<h1>
+<h1>Dark Souls Lorebook</h1>
   
  An iPad app that showcases different characters from Dark Souls lore.
 
