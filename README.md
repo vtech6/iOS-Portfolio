@@ -10,4 +10,4 @@ Adjusted both for newer and older iphone models.
   
  An iPad app that showcases different characters from Dark Souls lore.
 
-![iPad Dark Souls Lorebook](https://github.com/vtech6/DS-Lorebook---SwiftUI/blob/master/SoulsView/DSWorld.gif?raw=true)
+![iPad Dark Souls Lorebook](https://github.com/vtech6/iOS-Portfolio/blob/master/DSWorld.gif?raw=true)
