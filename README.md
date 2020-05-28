@@ -3,8 +3,7 @@
 An iPhone calculator with neumorphic design. Built with SwiftUI.
 Adjusted both for newer and older iphone models.
 
-![New iPhone Design](https://imgur.com/download/raOvlp4)
-![Old iPhone Design](https://imgur.com/download/IstEwfw)
+![Old iPhone Design](https://github.com/vtech6/iOS-Portfolio/blob/master/Neucalc.gif?raw=true)
 
 <h1>Dark Souls Lorebook</h1>
   
