@@ -17,6 +17,7 @@ struct ContentView: View {
     @State var nextNumber = "0"
     @State var funcMode = false
     @State var memory = ""
+    @State var showPreviousNumber = false
     
     var body: some View {
         return ZStack {
@@ -26,8 +27,13 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 10){
+                if self.showPreviousNumber{
+                    Text("\(self.previousNumber)")
+                    .font(.system(size: 50))
+                }else{
                 Text("\(currentNumber)")
                     .font(.system(size: 50))
+                }
                 Spacer()
                 VStack (spacing: 6){
                     
@@ -38,6 +44,7 @@ struct ContentView: View {
                         Button(action:{
                             self.currentNumber = "0"
                             self.previousNumber = "0"
+                            if self.showPreviousNumber{self.showPreviousNumber.toggle()}
                         })
                         {SymbolView(symbolString: "C")}
                         
@@ -53,6 +60,10 @@ struct ContentView: View {
                             self.currentFunction = "power"
                             self.funcMode.toggle()
                             }
+                            if self.previousNumber.hasSuffix(".0"){
+                                self.previousNumber.removeLast(2)
+                            }
+                            if !self.showPreviousNumber{self.showPreviousNumber.toggle()}
                         })
                         {SymbolView(symbolString: "^")}
                         Spacer()
@@ -73,16 +84,20 @@ struct ContentView: View {
                             self.currentFunction = "divide"
                             self.funcMode.toggle()
                             }
+                            if self.previousNumber.hasSuffix(".0"){
+                                self.previousNumber.removeLast(2)
+                            }
+                            if !self.showPreviousNumber{self.showPreviousNumber.toggle()}
                         })
                         {ButtonView(iconName: "divide")}
                     }
                     Spacer()
                     HStack{
-                        DigitView(currentNumber: $currentNumber, digit: 1)
+                        DigitView(currentNumber: $currentNumber, digit: 7, showPreviousNumber: $showPreviousNumber)
                         Spacer()
-                        DigitView(currentNumber: $currentNumber, digit: 2)
+                        DigitView(currentNumber: $currentNumber, digit: 8, showPreviousNumber: $showPreviousNumber)
                         Spacer()
-                        DigitView(currentNumber: $currentNumber, digit: 3)
+                        DigitView(currentNumber: $currentNumber, digit: 9, showPreviousNumber: $showPreviousNumber)
                         Spacer()
                         Button(action:{
                             if self.funcMode{
@@ -95,6 +110,10 @@ struct ContentView: View {
                             self.currentFunction = "multiply"
                                 self.funcMode.toggle()
                             }
+                            if self.previousNumber.hasSuffix(".0"){
+                                self.previousNumber.removeLast(2)
+                            }
+                            if !self.showPreviousNumber{self.showPreviousNumber.toggle()}
                         })
                         {
                             ButtonView(iconName: "multiply")
@@ -103,11 +122,11 @@ struct ContentView: View {
                     }
                     Spacer()
                     HStack{
-                        DigitView(currentNumber: $currentNumber, digit: 4)
+                        DigitView(currentNumber: $currentNumber, digit: 4, showPreviousNumber: $showPreviousNumber)
                         Spacer()
-                        DigitView(currentNumber: $currentNumber, digit: 5)
+                        DigitView(currentNumber: $currentNumber, digit: 5, showPreviousNumber: $showPreviousNumber)
                         Spacer()
-                        DigitView(currentNumber: $currentNumber, digit: 6)
+                        DigitView(currentNumber: $currentNumber, digit: 6, showPreviousNumber: $showPreviousNumber)
                         Spacer()
                         Button(action: {if self.funcMode{
                             self.previousNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
@@ -120,6 +139,10 @@ struct ContentView: View {
                             self.currentFunction = "sum"
                             self.funcMode.toggle()
                             }
+                            if self.previousNumber.hasSuffix(".0"){
+                                self.previousNumber.removeLast(2)
+                            }
+                            if !self.showPreviousNumber{self.showPreviousNumber.toggle()}
                         }){
                             ButtonView(iconName: "minus")
                         }
@@ -127,11 +150,11 @@ struct ContentView: View {
                     
                     Spacer()
                     HStack(){
-                        DigitView(currentNumber: $currentNumber, digit: 7)
+                        DigitView(currentNumber: $currentNumber, digit: 1, showPreviousNumber: $showPreviousNumber)
                         Spacer()
-                        DigitView(currentNumber: $currentNumber, digit: 8)
+                        DigitView(currentNumber: $currentNumber, digit: 2, showPreviousNumber: $showPreviousNumber)
                         Spacer()
-                        DigitView(currentNumber: $currentNumber, digit: 9)
+                        DigitView(currentNumber: $currentNumber, digit: 3, showPreviousNumber: $showPreviousNumber)
                         Spacer()
                         Button(action: {if self.funcMode{
                             self.previousNumber = String(equals(functionName: self.currentFunction, integerOne: Float64(self.previousNumber) ?? 0, integerTwo: Float64(self.currentNumber) ?? 0))
@@ -143,6 +166,10 @@ struct ContentView: View {
                             self.currentFunction = "sum"
                             self.funcMode.toggle()
                             }
+                            if self.previousNumber.hasSuffix(".0"){
+                                self.previousNumber.removeLast(2)
+                            }
+                            if !self.showPreviousNumber{self.showPreviousNumber.toggle()}
                         }){
                             ButtonView(iconName: "plus")
                         }
@@ -154,6 +181,7 @@ struct ContentView: View {
                         Spacer()
                         Button(action:{
                             if !self.currentNumber.contains("."){self.currentNumber+="."}
+                            
                         })
                         {
                             SymbolView(symbolString: ".")
@@ -193,8 +221,11 @@ struct ContentView_Previews: PreviewProvider {
 let screen = UIScreen.main.bounds
 
 struct DigitView: View {
+    
     @Binding var currentNumber: String
     @State var digit: Int
+    @Binding var showPreviousNumber: Bool
+    
     var body: some View {
         ZStack {
             Text(" ")
@@ -213,6 +244,7 @@ struct DigitView: View {
                 }else{
                     self.currentNumber += String(self.digit)
                 }
+                if self.showPreviousNumber {self.showPreviousNumber.toggle()}
             }
             ){
                 Text(String(self.digit))

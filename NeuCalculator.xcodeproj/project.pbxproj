@@ -15,7 +15,6 @@
 		A277452B24746A3D0079126C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A277452924746A3D0079126C /* LaunchScreen.storyboard */; };
 		A277453324746D560079126C /* CalculatorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277453224746D560079126C /* CalculatorControl.swift */; };
 		A2774535247470FC0079126C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2774534247470FC0079126C /* ButtonView.swift */; };
-		A29D4D91247E3AB900265083 /* DSWorld.gif in Resources */ = {isa = PBXBuildFile; fileRef = A29D4D90247E3AB900265083 /* DSWorld.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		A277452C24746A3D0079126C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A277453224746D560079126C /* CalculatorControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorControl.swift; sourceTree = "<group>"; };
 		A2774534247470FC0079126C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		A29D4D90247E3AB900265083 /* DSWorld.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = DSWorld.gif; path = ../../../SoulsView/SoulsView/SoulsView/DSWorld.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +67,6 @@
 				A277453224746D560079126C /* CalculatorControl.swift */,
 				A277452424746A3D0079126C /* Assets.xcassets */,
 				A277452924746A3D0079126C /* LaunchScreen.storyboard */,
-				A29D4D90247E3AB900265083 /* DSWorld.gif */,
 				A277452C24746A3D0079126C /* Info.plist */,
 				A277452624746A3D0079126C /* Preview Content */,
 			);
@@ -144,7 +141,6 @@
 			files = (
 				A277452B24746A3D0079126C /* LaunchScreen.storyboard in Resources */,
 				A277452824746A3D0079126C /* Preview Assets.xcassets in Resources */,
-				A29D4D91247E3AB900265083 /* DSWorld.gif in Resources */,
 				A277452524746A3D0079126C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
