@@ -1,3 +1,9 @@
+<h1>Taiwan - City Guide</h1>
+
+My latest project, I am planning to build a city guide of Taiwan, including points of interests and parks. Custom scroll view built with geometry reader, I might add some more custom animations in the future.
+
+![Taiwan City Guide](https://github.com/vtech6/iOS-Portfolio/blob/master/Taiwan%20City%20Guide.gif?raw=true)
+
 <h1>NeuCalculator</h1>
 
 An iPhone calculator with neumorphic design. Built with SwiftUI.
