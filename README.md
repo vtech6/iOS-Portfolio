@@ -2,7 +2,7 @@
 
 Since algorithms are a crucial part of software development, I decided to make a sorting visualizer, currently supporting only Bubble Sort, but more will be added soon.
 
-![AlgoVisualizer](https://github.com/vtech6/iOS-Portfolio/blob/master/AlgoVisualizer.gif?raw=true)
+![AlgoVisualizer](https://github.com/vtech6/iOS-Portfolio/blob/master/AlgoVisualizerUpdate.gif?raw=true)
 
 <h1>Taiwan - City Guide</h1>
 
