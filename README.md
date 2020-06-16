@@ -4,6 +4,12 @@ Since algorithms are a crucial part of software development, I decided to make a
 
 ![AlgoVisualizer](https://github.com/vtech6/iOS-Portfolio/blob/master/AlgoVisualizerUpdate.gif?raw=true)
 
+<h1>iRemember</h1>
+
+iRemember is a flashcards app that aims at making it easier for people to revise and learn new things through standard flashcards and games. It can be found in the folder re-wise, as that was its previous name :D.
+
+![iRemember](https://github.com/vtech6/iOS-Portfolio/blob/master/iRemember.gif?raw=true)
+
 <h1>Taiwan - City Guide</h1>
 
 My latest project, I am planning to build a city guide of Taiwan, including points of interests and parks. Custom scroll view built with geometry reader, I might add some more custom animations in the future.
