@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2A536F724A665DD009033BB /* PlaySelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A536F624A665DC009033BB /* PlaySelectView.swift */; };
+		A2A536F924A666F2009033BB /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A536F824A666F2009033BB /* PlayView.swift */; };
+		A2A536FB24A674F5009033BB /* FlashcardReviseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A536FA24A674F5009033BB /* FlashcardReviseView.swift */; };
+		A2D47A6F24A48C5300C5BDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47A6E24A48C5300C5BDAC /* AppDelegate.swift */; };
+		A2D47A7124A48C5300C5BDAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47A7024A48C5300C5BDAC /* SceneDelegate.swift */; };
+		A2D47A7424A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2D47A7224A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld */; };
+		A2D47A7624A48C5300C5BDAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47A7524A48C5300C5BDAC /* ContentView.swift */; };
+		A2D47A7824A48C5300C5BDAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D47A7724A48C5300C5BDAC /* Assets.xcassets */; };
+		A2D47A7B24A48C5300C5BDAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D47A7A24A48C5300C5BDAC /* Preview Assets.xcassets */; };
+		A2D47A7E24A48C5300C5BDAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D47A7C24A48C5300C5BDAC /* LaunchScreen.storyboard */; };
+		A2D47AA924A4911700C5BDAC /* AddFlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AA824A4911700C5BDAC /* AddFlashcardView.swift */; };
+		A2D47AB024A4932E00C5BDAC /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AAF24A4932E00C5BDAC /* FlashcardListView.swift */; };
+		A2D47AE424A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE024A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift */; };
+		A2D47AE524A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE124A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift */; };
+		A2D47AE624A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE224A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift */; };
+		A2D47AE724A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE324A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2A536F624A665DC009033BB /* PlaySelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySelectView.swift; sourceTree = "<group>"; };
+		A2A536F824A666F2009033BB /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		A2A536FA24A674F5009033BB /* FlashcardReviseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardReviseView.swift; sourceTree = "<group>"; };
+		A2D47A6B24A48C5300C5BDAC /* iRememberiOS14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRememberiOS14.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D47A6E24A48C5300C5BDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2D47A7024A48C5300C5BDAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A2D47A7324A48C5300C5BDAC /* iRememberiOS14.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iRememberiOS14.xcdatamodel; sourceTree = "<group>"; };
+		A2D47A7524A48C5300C5BDAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A2D47A7724A48C5300C5BDAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2D47A7A24A48C5300C5BDAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2D47A7D24A48C5300C5BDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2D47A7F24A48C5300C5BDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2D47AA824A4911700C5BDAC /* AddFlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlashcardView.swift; sourceTree = "<group>"; };
+		A2D47AAF24A4932E00C5BDAC /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
+		A2D47AE024A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Flashcard+CoreDataClass.swift"; path = "iRememberiOS14/CoreData/Flashcard+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A2D47AE124A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Flashcard+CoreDataProperties.swift"; path = "iRememberiOS14/CoreData/Flashcard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2D47AE224A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FlashcardSet+CoreDataClass.swift"; path = "iRememberiOS14/CoreData/FlashcardSet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A2D47AE324A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FlashcardSet+CoreDataProperties.swift"; path = "iRememberiOS14/CoreData/FlashcardSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2D47A6824A48C5300C5BDAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2D47A6224A48C5300C5BDAC = {
+			isa = PBXGroup;
+			children = (
+				A2D47AE024A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift */,
+				A2D47AE124A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift */,
+				A2D47AE224A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift */,
+				A2D47AE324A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift */,
+				A2D47A6D24A48C5300C5BDAC /* iRememberiOS14 */,
+				A2D47A6C24A48C5300C5BDAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2D47A6C24A48C5300C5BDAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2D47A6B24A48C5300C5BDAC /* iRememberiOS14.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2D47A6D24A48C5300C5BDAC /* iRememberiOS14 */ = {
+			isa = PBXGroup;
+			children = (
+				A2D47A6E24A48C5300C5BDAC /* AppDelegate.swift */,
+				A2D47A7024A48C5300C5BDAC /* SceneDelegate.swift */,
+				A2D47A7524A48C5300C5BDAC /* ContentView.swift */,
+				A2D47AA824A4911700C5BDAC /* AddFlashcardView.swift */,
+				A2D47AAF24A4932E00C5BDAC /* FlashcardListView.swift */,
+				A2A536F624A665DC009033BB /* PlaySelectView.swift */,
+				A2A536F824A666F2009033BB /* PlayView.swift */,
+				A2A536FA24A674F5009033BB /* FlashcardReviseView.swift */,
+				A2D47A7724A48C5300C5BDAC /* Assets.xcassets */,
+				A2D47A7C24A48C5300C5BDAC /* LaunchScreen.storyboard */,
+				A2D47A7F24A48C5300C5BDAC /* Info.plist */,
+				A2D47A7224A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld */,
+				A2D47A7924A48C5300C5BDAC /* Preview Content */,
+			);
+			path = iRememberiOS14;
+			sourceTree = "<group>";
+		};
+		A2D47A7924A48C5300C5BDAC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A2D47A7A24A48C5300C5BDAC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2D47A6A24A48C5300C5BDAC /* iRememberiOS14 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2D47A8224A48C5300C5BDAC /* Build configuration list for PBXNativeTarget "iRememberiOS14" */;
+			buildPhases = (
+				A2D47A6724A48C5300C5BDAC /* Sources */,
+				A2D47A6824A48C5300C5BDAC /* Frameworks */,
+				A2D47A6924A48C5300C5BDAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRememberiOS14;
+			productName = iRememberiOS14;
+			productReference = A2D47A6B24A48C5300C5BDAC /* iRememberiOS14.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2D47A6324A48C5300C5BDAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					A2D47A6A24A48C5300C5BDAC = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = A2D47A6624A48C5300C5BDAC /* Build configuration list for PBXProject "iRememberiOS14" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2D47A6224A48C5300C5BDAC;
+			productRefGroup = A2D47A6C24A48C5300C5BDAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2D47A6A24A48C5300C5BDAC /* iRememberiOS14 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2D47A6924A48C5300C5BDAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2D47A7E24A48C5300C5BDAC /* LaunchScreen.storyboard in Resources */,
+				A2D47A7B24A48C5300C5BDAC /* Preview Assets.xcassets in Resources */,
+				A2D47A7824A48C5300C5BDAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2D47A6724A48C5300C5BDAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A536F724A665DD009033BB /* PlaySelectView.swift in Sources */,
+				A2D47A6F24A48C5300C5BDAC /* AppDelegate.swift in Sources */,
+				A2D47AA924A4911700C5BDAC /* AddFlashcardView.swift in Sources */,
+				A2D47AB024A4932E00C5BDAC /* FlashcardListView.swift in Sources */,
+				A2D47A7424A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld in Sources */,
+				A2A536FB24A674F5009033BB /* FlashcardReviseView.swift in Sources */,
+				A2D47AE524A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift in Sources */,
+				A2A536F924A666F2009033BB /* PlayView.swift in Sources */,
+				A2D47A7624A48C5300C5BDAC /* ContentView.swift in Sources */,
+				A2D47AE724A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift in Sources */,
+				A2D47AE624A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift in Sources */,
+				A2D47AE424A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift in Sources */,
+				A2D47A7124A48C5300C5BDAC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A2D47A7C24A48C5300C5BDAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2D47A7D24A48C5300C5BDAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2D47A8024A48C5300C5BDAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2D47A8124A48C5300C5BDAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2D47A8324A48C5300C5BDAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iRememberiOS14/Preview Content\"";
+				DEVELOPMENT_TEAM = U2CCFGXM76;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iRememberiOS14/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikolajwitkowski.iRememberiOS14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2D47A8424A48C5300C5BDAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iRememberiOS14/Preview Content\"";
+				DEVELOPMENT_TEAM = U2CCFGXM76;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iRememberiOS14/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikolajwitkowski.iRememberiOS14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2D47A6624A48C5300C5BDAC /* Build configuration list for PBXProject "iRememberiOS14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2D47A8024A48C5300C5BDAC /* Debug */,
+				A2D47A8124A48C5300C5BDAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2D47A8224A48C5300C5BDAC /* Build configuration list for PBXNativeTarget "iRememberiOS14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2D47A8324A48C5300C5BDAC /* Debug */,
+				A2D47A8424A48C5300C5BDAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2D47A7224A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2D47A7324A48C5300C5BDAC /* iRememberiOS14.xcdatamodel */,
+			);
+			currentVersion = A2D47A7324A48C5300C5BDAC /* iRememberiOS14.xcdatamodel */;
+			path = iRememberiOS14.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A2D47A6324A48C5300C5BDAC /* Project object */;
+}

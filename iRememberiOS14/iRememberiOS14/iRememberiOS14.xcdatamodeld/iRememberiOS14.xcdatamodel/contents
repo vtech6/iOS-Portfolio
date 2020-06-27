@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17162" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Flashcard" representedClassName="Flashcard" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="orderNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FlashcardSet" inverseName="flashcard" inverseEntity="FlashcardSet"/>
+    </entity>
+    <entity name="FlashcardSet" representedClassName="FlashcardSet" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="shortname" optional="YES" attributeType="String"/>
+        <relationship name="flashcard" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flashcard" inverseName="origin" inverseEntity="Flashcard"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="shortname"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Flashcard" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="FlashcardSet" positionX="243.27734375" positionY="-12.80078125" width="128" height="88"/>
+    </elements>
+</model>
