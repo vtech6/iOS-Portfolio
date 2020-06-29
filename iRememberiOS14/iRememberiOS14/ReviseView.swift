@@ -10,19 +10,29 @@ import SwiftUI
 struct ReviseView: View {
     @Binding var showRevise: Bool
     @State var set: FlashcardSet
-    @State var showAnswer = false
     var body: some View {
         TabView {
             ForEach(set.flashcardArray, id: \.self){flashcard in
-                Text(showAnswer ? flashcard.wrappedAnswer : flashcard.wrappedQuestion)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: screen.height)
-                    .background(Color.white.opacity(0.01))
-                    .onTapGesture {
-                    showAnswer.toggle()
-                }
+                FlashcardView(question: flashcard.wrappedQuestion, answer: flashcard.wrappedAnswer)
             }
         }
                     .tabViewStyle(PageTabViewStyle())
+    }
+}
+
+struct FlashcardView: View {
+    @State var question: String
+    @State var answer: String
+    @State var showAnswer = false
+    var body: some View {
+        Text(showAnswer ? answer : question)
+            .frame(maxWidth: .infinity)
+            .frame(height: screen.height)
+            .background(Color.white.opacity(0.01))
+            .onTapGesture {
+                showAnswer.toggle()
+            }.onAppear {
+                showAnswer = false
+            }
     }
 }
