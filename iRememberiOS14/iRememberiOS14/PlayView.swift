@@ -40,6 +40,16 @@ struct PlayView: View {
     @State var correctCounter = 0
     @State var showSummary = false
     
+    func summaryText() -> String {
+        switch correctCounter{
+        case set.flashcardArray.count:
+            return "Flawless!"
+        case (set.flashcardArray.count/2)..<set.flashcardArray.count:
+            return "Not Bad!"
+        default:
+            return "Try Again?"
+        }
+    }
     var body: some View {
         ZStack {
             VStack{
@@ -57,10 +67,8 @@ struct PlayView: View {
                             playIndex+=1}else{
                                 showSummary.toggle()
                                 playIndex=0
-                                
                             }
                         self.answers = generateRandomAnswers(playIndex: playIndex, set: set.flashcardArray)
-                        
                     }){
                         Text(answers[0]).font(.body)
                         
@@ -73,7 +81,6 @@ struct PlayView: View {
                             playIndex+=1}else{
                                 showSummary.toggle()
                                 playIndex=0
-                                
                             }
                         self.answers = generateRandomAnswers(playIndex: playIndex, set: set.flashcardArray)
                     }){
@@ -82,8 +89,6 @@ struct PlayView: View {
                     }.frame(width: screen.width/2)
                     .multilineTextAlignment(.center)
                 }.animation(nil)
-                
-                    
             }.onAppear {
                 self.answers = generateRandomAnswers(playIndex: playIndex, set: set.flashcardArray)
             }
@@ -94,7 +99,10 @@ struct PlayView: View {
             .zIndex(showSummary ? 0.0 : 1.0)
             
             VStack {
-                Text("Correct answers: \(String(correctCounter))/\(set.flashcardArray.count)")
+                Text("Correct Answers: \(String(correctCounter))/\(set.flashcardArray.count)")
+                
+                Text("\(summaryText())")
+                
             }
             .zIndex(showSummary ? 1.0 : 0.0)
             .offset(y: showSummary ? 0 : -500).animation(.spring())

@@ -12,12 +12,9 @@ struct PlaySelectView: View {
     @Environment (\.managedObjectContext) var moc
     @FetchRequest(entity: FlashcardSet.entity(), sortDescriptors: []) var flashcardSets: FetchedResults<FlashcardSet>
     
-    //User Defaults
-    @AppStorage("LastSet") var lastSet = 0
     //States for user input
     @State var showPlay = false
-    @State var showSetDetail = false
-    @State var selectedTab = 0
+    
     var body: some View {
         
         NavigationView {

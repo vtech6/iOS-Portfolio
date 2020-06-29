@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab = 0
     var body: some View {
+        TabView(selection: $selectedTab){
+            ManageFlashcardsView()
+    .tabItem { Image(systemName: "tray.full")
+        Text("Sets")
+    }.tag(0)
+    ReviseSelectView()
+        .tabItem { Image(systemName: "book")
+            Text("Revise")
+        }.tag(1)
+    PlaySelectView()
+        .tabItem { Image(systemName: "gamecontroller")
+            Text("Play")
+        }.tag(2)
+
         
-        FlashcardListView()
-        
-        
+        }
     }
 }
 
