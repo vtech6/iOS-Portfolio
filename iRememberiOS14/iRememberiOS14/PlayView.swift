@@ -50,11 +50,14 @@ struct PlayView: View {
             return "Try Again?"
         }
     }
+    
+
     var body: some View {
         ZStack {
+            
             VStack{
                 Text(set.flashcardArray[playIndex].wrappedQuestion)
-                    .font(.title2)
+                    .font(device.contains("iPad") ? .largeTitle : .title)
                 Spacer()
                 HStack{
                     Button(action:{
@@ -70,9 +73,11 @@ struct PlayView: View {
                             }
                         self.answers = generateRandomAnswers(playIndex: playIndex, set: set.flashcardArray)
                     }){
-                        Text(answers[0]).font(.body)
+                        Text(answers[0]).font(device.contains("iPad") ? .system(size: 20) : .body)
+                            .frame(width: UIDevice.current.orientation.isLandscape ? screen.height/2 : screen.width/2)
+                            .multilineTextAlignment(.center)
                         
-                    }.frame(width: screen.width/2)
+                    }
                     Button(action:{
                         if answers[1] == set.flashcardArray[playIndex].wrappedAnswer{
                             correctCounter+=1
@@ -84,16 +89,17 @@ struct PlayView: View {
                             }
                         self.answers = generateRandomAnswers(playIndex: playIndex, set: set.flashcardArray)
                     }){
-                        Text(answers[1]).font(.body)
+                        Text(answers[1]).font(device.contains("iPad") ? .system(size: 20) : .body).frame(width:UIDevice.current.orientation.isLandscape ? screen.height/2 : screen.width/2)
+                            
+                            .multilineTextAlignment(.center)
                         
-                    }.frame(width: screen.width/2)
-                    .multilineTextAlignment(.center)
+                    }
                 }.animation(nil)
             }.onAppear {
                 self.answers = generateRandomAnswers(playIndex: playIndex, set: set.flashcardArray)
             }
             .frame(maxWidth: .infinity)
-            .frame(height: screen.height/2)
+            .frame(height: UIDevice.current.orientation.isLandscape ? screen.width/2 :screen.height/2)
             .blur(radius: showSummary ? 5 : 0)
             .animation(.easeInOut(duration: 0.3))
             .zIndex(showSummary ? 0.0 : 1.0)
@@ -105,15 +111,17 @@ struct PlayView: View {
                 
             }
             .zIndex(showSummary ? 1.0 : 0.0)
-            .offset(y: showSummary ? 0 : -500).animation(.spring())
-            .frame(width:screen.width, height: screen.height/2)
+            .offset(y: showSummary ? 0 : UIDevice.current.orientation.isLandscape ? screen.height : screen.width).animation(.spring())
+            .frame(width: UIDevice.current.orientation.isLandscape ? screen.height : screen.width, height:UIDevice.current.orientation.isLandscape ? screen.width : screen.height)
             .background(Color.white.opacity(0.01))
             .onTapGesture{if showSummary{
-                self.correctCounter=0
                 showSummary.toggle()
+                self.correctCounter=0
             }}
         }
         
         
     }
 }
+
+

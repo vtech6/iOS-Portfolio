@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State var selectedTab = 0
     var body: some View {
         TabView(selection: $selectedTab){
@@ -25,7 +26,7 @@ struct ContentView: View {
         }.tag(2)
 
         
-        }
+        }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 

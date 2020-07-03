@@ -16,19 +16,51 @@ struct ManageFlashcardsView: View {
     @AppStorage("LastSet") var lastSet = 0
     //States for user input
     @State var showAddFlashcard = false
+    @State var edit = false
+    
     var body: some View {
         NavigationView {
             List{
                 ForEach(flashcardSets, id: \.self){ set in
+                    if device.contains("iPad"){
+                        NavigationLink(destination:List{
+                                        HStack{Text("Question").frame(maxWidth: 500).font(.title)
+                                            Spacer()
+                                            Text("Answer").frame(maxWidth: 500)
+                                        }.font(.title)
+                                        ForEach(set.flashcardArray, id: \.self){flashcard in
+                            HStack{
+                                LazyVStack{
+                                    Text(flashcard.wrappedQuestion).font(.system(size: 20))
+                                }.frame(maxWidth: 500)
+                                Spacer()
+                                LazyVStack {
+                                    Text(flashcard.wrappedAnswer).font(.system(size: 20))
+                                }.frame(maxWidth: 500)
+                            }.multilineTextAlignment(.center)
+                        }.onDelete{row in
+                            func removeItem(at offsets: IndexSet) {
+                                for index in offsets {
+                                    let flashcard = set.flashcardArray[index]
+                                    moc.delete(flashcard)
+                                }
+                                try? self.moc.save()
+                            }
+                            removeItem(at: row)
+                        }}){
+                            Text("\(set.wrappedName)")
+                        }
+                    }else{
                     DisclosureGroup("\(set.wrappedName)"){
                         ForEach(set.flashcardArray, id: \.self){flashcard in
-                            LazyHStack{
+                            HStack{
                                 LazyVStack{
                                     Text(flashcard.wrappedQuestion)
-                                }.frame(width: (screen.width-50)/2)
+                                }.frame(maxWidth: 320)
+                                Spacer()
                                 LazyVStack {
                                     Text(flashcard.wrappedAnswer)
-                                }.frame(width: (screen.width-50)/2)
+                                }.frame(maxWidth: 320)
                             }.multilineTextAlignment(.center)
                         }.onDelete{row in
                             func removeItem(at offsets: IndexSet) {
@@ -41,7 +73,7 @@ struct ManageFlashcardsView: View {
                             removeItem(at: row)
                         }
                     }
-                }
+                    }}
                 .onDelete { indexSet in
                     func removeItem(at offsets: IndexSet) {
                         for index in offsets {
@@ -50,13 +82,17 @@ struct ManageFlashcardsView: View {
                         }
                         try? self.moc.save()
                     }
-                    
                     removeItem(at: indexSet)
                 }
             }.listStyle(GroupedListStyle())
+            
             .navigationBarTitle("Manage Flashcards")
             .navigationBarItems(trailing:
-                                    Button(action: {self.showAddFlashcard.toggle()}){
+                                    Button(action: {
+                                        if lastSet>=flashcardSets.count{
+                                            lastSet=0
+                                        }
+                                            self.showAddFlashcard.toggle()}){
                                         Text("Add Flashcard")
                                             .padding(.top)
                                             .padding(.horizontal)
@@ -76,3 +112,4 @@ struct FlashcardListView_Previews: PreviewProvider {
 }
 
 let screen = UIScreen.main.bounds
+let device = UIDevice.current.model

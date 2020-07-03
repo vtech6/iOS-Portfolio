@@ -25,7 +25,7 @@ struct FlashcardView: View {
     @State var answer: String
     @State var showAnswer = false
     var body: some View {
-        Text(showAnswer ? answer : question)
+        Text(showAnswer ? answer : question).font(device.contains("iPad") ? .system(size: 20) : .body)
             .frame(maxWidth: .infinity)
             .frame(height: screen.height)
             .background(Color.white.opacity(0.01))

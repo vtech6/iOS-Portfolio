@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A24F5AF424A9BCFC00C4919C /* ReviseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F5AF324A9BCFC00C4919C /* ReviseView.swift */; };
 		A2A536F724A665DD009033BB /* PlaySelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A536F624A665DC009033BB /* PlaySelectView.swift */; };
 		A2A536F924A666F2009033BB /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A536F824A666F2009033BB /* PlayView.swift */; };
-		A2A536FB24A674F5009033BB /* FlashcardReviseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A536FA24A674F5009033BB /* FlashcardReviseView.swift */; };
+		A2A536FB24A674F5009033BB /* ReviseSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A536FA24A674F5009033BB /* ReviseSelectView.swift */; };
 		A2D47A6F24A48C5300C5BDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47A6E24A48C5300C5BDAC /* AppDelegate.swift */; };
 		A2D47A7124A48C5300C5BDAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47A7024A48C5300C5BDAC /* SceneDelegate.swift */; };
 		A2D47A7424A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2D47A7224A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld */; };
@@ -18,17 +19,19 @@
 		A2D47A7B24A48C5300C5BDAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D47A7A24A48C5300C5BDAC /* Preview Assets.xcassets */; };
 		A2D47A7E24A48C5300C5BDAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D47A7C24A48C5300C5BDAC /* LaunchScreen.storyboard */; };
 		A2D47AA924A4911700C5BDAC /* AddFlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AA824A4911700C5BDAC /* AddFlashcardView.swift */; };
-		A2D47AB024A4932E00C5BDAC /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AAF24A4932E00C5BDAC /* FlashcardListView.swift */; };
+		A2D47AB024A4932E00C5BDAC /* ManageFlashcardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AAF24A4932E00C5BDAC /* ManageFlashcardsView.swift */; };
 		A2D47AE424A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE024A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift */; };
 		A2D47AE524A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE124A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift */; };
 		A2D47AE624A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE224A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift */; };
 		A2D47AE724A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D47AE324A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift */; };
+		A2F5B66824AC7BC9009DC12D /* JSONOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5B66724AC7BC9009DC12D /* JSONOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A24F5AF324A9BCFC00C4919C /* ReviseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviseView.swift; sourceTree = "<group>"; };
 		A2A536F624A665DC009033BB /* PlaySelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySelectView.swift; sourceTree = "<group>"; };
 		A2A536F824A666F2009033BB /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
-		A2A536FA24A674F5009033BB /* FlashcardReviseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardReviseView.swift; sourceTree = "<group>"; };
+		A2A536FA24A674F5009033BB /* ReviseSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviseSelectView.swift; sourceTree = "<group>"; };
 		A2D47A6B24A48C5300C5BDAC /* iRememberiOS14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRememberiOS14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D47A6E24A48C5300C5BDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2D47A7024A48C5300C5BDAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,11 +42,12 @@
 		A2D47A7D24A48C5300C5BDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2D47A7F24A48C5300C5BDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2D47AA824A4911700C5BDAC /* AddFlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlashcardView.swift; sourceTree = "<group>"; };
-		A2D47AAF24A4932E00C5BDAC /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
+		A2D47AAF24A4932E00C5BDAC /* ManageFlashcardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFlashcardsView.swift; sourceTree = "<group>"; };
 		A2D47AE024A4D41C00C5BDAC /* Flashcard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Flashcard+CoreDataClass.swift"; path = "iRememberiOS14/CoreData/Flashcard+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A2D47AE124A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Flashcard+CoreDataProperties.swift"; path = "iRememberiOS14/CoreData/Flashcard+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2D47AE224A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FlashcardSet+CoreDataClass.swift"; path = "iRememberiOS14/CoreData/FlashcardSet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A2D47AE324A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FlashcardSet+CoreDataProperties.swift"; path = "iRememberiOS14/CoreData/FlashcardSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2F5B66724AC7BC9009DC12D /* JSONOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,12 @@
 				A2D47A7024A48C5300C5BDAC /* SceneDelegate.swift */,
 				A2D47A7524A48C5300C5BDAC /* ContentView.swift */,
 				A2D47AA824A4911700C5BDAC /* AddFlashcardView.swift */,
-				A2D47AAF24A4932E00C5BDAC /* FlashcardListView.swift */,
+				A2D47AAF24A4932E00C5BDAC /* ManageFlashcardsView.swift */,
 				A2A536F624A665DC009033BB /* PlaySelectView.swift */,
 				A2A536F824A666F2009033BB /* PlayView.swift */,
-				A2A536FA24A674F5009033BB /* FlashcardReviseView.swift */,
+				A2A536FA24A674F5009033BB /* ReviseSelectView.swift */,
+				A24F5AF324A9BCFC00C4919C /* ReviseView.swift */,
+				A2F5B66724AC7BC9009DC12D /* JSONOperations.swift */,
 				A2D47A7724A48C5300C5BDAC /* Assets.xcassets */,
 				A2D47A7C24A48C5300C5BDAC /* LaunchScreen.storyboard */,
 				A2D47A7F24A48C5300C5BDAC /* Info.plist */,
@@ -178,11 +184,13 @@
 				A2A536F724A665DD009033BB /* PlaySelectView.swift in Sources */,
 				A2D47A6F24A48C5300C5BDAC /* AppDelegate.swift in Sources */,
 				A2D47AA924A4911700C5BDAC /* AddFlashcardView.swift in Sources */,
-				A2D47AB024A4932E00C5BDAC /* FlashcardListView.swift in Sources */,
+				A2D47AB024A4932E00C5BDAC /* ManageFlashcardsView.swift in Sources */,
 				A2D47A7424A48C5300C5BDAC /* iRememberiOS14.xcdatamodeld in Sources */,
-				A2A536FB24A674F5009033BB /* FlashcardReviseView.swift in Sources */,
+				A2A536FB24A674F5009033BB /* ReviseSelectView.swift in Sources */,
 				A2D47AE524A4D41C00C5BDAC /* Flashcard+CoreDataProperties.swift in Sources */,
 				A2A536F924A666F2009033BB /* PlayView.swift in Sources */,
+				A2F5B66824AC7BC9009DC12D /* JSONOperations.swift in Sources */,
+				A24F5AF424A9BCFC00C4919C /* ReviseView.swift in Sources */,
 				A2D47A7624A48C5300C5BDAC /* ContentView.swift in Sources */,
 				A2D47AE724A4D41C00C5BDAC /* FlashcardSet+CoreDataProperties.swift in Sources */,
 				A2D47AE624A4D41C00C5BDAC /* FlashcardSet+CoreDataClass.swift in Sources */,

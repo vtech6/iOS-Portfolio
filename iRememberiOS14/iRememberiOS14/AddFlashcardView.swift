@@ -12,7 +12,7 @@ struct AddFlashcardView: View {
     @Environment (\.managedObjectContext) var moc
     @FetchRequest(entity: Flashcard.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Flashcard.orderNumber, ascending: true)]) var flashcards: FetchedResults<Flashcard>
     @FetchRequest(entity: FlashcardSet.entity(), sortDescriptors: []) var flashcardSets: FetchedResults<FlashcardSet>
-    
+    @State var orientation = UIDevice.current.orientation.isLandscape
     
     
     //States for user input
@@ -27,14 +27,22 @@ struct AddFlashcardView: View {
     
     var body: some View {
         NavigationView{
-            Form{if let first = flashcardSets.first{
-                Picker(selection: $lastSet, label: Text("Choose Set")){
-                    List{
-                    ForEach(0..<flashcardSets.endIndex){ i in
-                        Text("\(flashcardSets[i].wrappedName)")
+            Form{
+                if UIDevice.current.orientation.isLandscape == true && !device.contains("iPad"){
+                    Button(action: {showAddFlashcard = false}){Text("Back")}
+                }
+                if let last = flashcardSets.first{
+                    if !addSet{
+                        Picker(selection: $lastSet, label: Text("Choose Set")){
+                            List{
+                                ForEach(0..<flashcardSets.endIndex){ i in
+                                    Text("\(flashcardSets[i].wrappedName)")
+                                }
+                            }
+                        }
                     }
                 }
-                }}
+                
                 Section{
                     HStack {if let first = flashcardSets.first{
                         if !addSet{
@@ -66,8 +74,8 @@ struct AddFlashcardView: View {
                         newFlashcard.answer = self.answer
                         newFlashcard.origin = FlashcardSet(context: self.moc)
                         if let first = flashcardSets.first{if !addSet{
-                        newFlashcard.origin?.name = flashcardSets[lastSet].wrappedName
-                        newFlashcard.origin?.shortname = flashcardSets[lastSet].wrappedName
+                            newFlashcard.origin?.name = flashcardSets[lastSet].wrappedName
+                            newFlashcard.origin?.shortname = flashcardSets[lastSet].wrappedName
                         }else{
                             newFlashcard.origin?.name = setTitle
                             newFlashcard.origin?.shortname = setTitle
@@ -87,11 +95,13 @@ struct AddFlashcardView: View {
                     }
                 }
             }.navigationBarTitle("Add Flashcard")
-            .navigationBarItems(leading: Button(action:{addMultiple.toggle()}){if !addMultiple {Text("Multiple Adding Off")}else{Text("Multiple Adding On")}},
-                                    trailing: Button(action:{self.addSet.toggle()}){Text("New Set")}.padding())
+            .navigationBarItems(leading: Button(action:{addMultiple.toggle()}){if !addMultiple {Text("Add Multiple Flashcards: Off")}else{Text("Add Multiple Flashcards: On")}},
+                                trailing: Button(action:{self.addSet.toggle()}){Text("New Set")}.padding())
+            
+            
         }
-        
     }
 }
+
 
 
