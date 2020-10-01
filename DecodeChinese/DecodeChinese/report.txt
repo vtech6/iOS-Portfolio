@@ -1,0 +1,20 @@
+//
+//  report.txt
+//  DecodeChinese
+//
+//  Created by Mikolaj Witkowski on 04/09/2020.
+//
+
+Hello!
+According to the task description, I am writing this file to underline the errors that have occured within the JSON data.
+
+1) Labels do not match the items - for example, characters have their hanzi written under the key pinyin and pinyin under the key hanzi.
+2) One of the words came in with a set of characters from another word. Since this kind of data does not disrupt the workflow I just left it as is, but I woudl work on organizing the data in the backend.
+3) Some of the arrays come empty, some of them come in irregular sizes. That's fine with Swift, because an iOS developer nearly always takes into account the optionals.
+4) The SVG image names might as well be just the names without the extensions, because XCode stores them without extensions. That's also removable with code.
+5) While working with file ID's is okay, it's a bit more cumbersome than working with dictionaries or arrays, because it adds more data management within the app.
+6) Audio files worked flawlessly.
+7) Image descriptions could be added to JSON so that they would appear in the magnified view.
+8) Audio files could come separately per character and their names could be included in pronunciation as an array of strings. This way we could reduce the amount of work and space needed for separate files (although the ones in JSON seem to be merged in the backend?).
+
+Conclusions: Overall I am really happy with the outcome and I hope you liked it too. Doing this was tons of fun and once again confirmed my belief that this is what I truly like doing! Thank you for taking your time to read through this report!
