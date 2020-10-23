@@ -11,3 +11,9 @@ iRemember is a flashcards app that aims at making it easier for people to revise
 Since algorithms are a crucial part of software development, I decided to make a sorting visualizer, currently supporting only Bubble Sort, but more will be added soon.
 
 ![AlgoVisualizer](https://github.com/vtech6/iOS-Portfolio/blob/master/Older%20Projects/AlgoVisualizerUpdate.gif?raw=true)
+
+<h1>Decode Chinese recruitment task</h1>
+
+This small app was a part of the recruitment process at Decode Chinese. It consumes an API and displays different kinds of data, plays sounds and shows a closer view of images with pinch-to-zoom gestures.
+
+![DecodeChinese](https://github.com/vtech6/iOS-Portfolio/blob/master/DecodeChinese/DecodeChineseGif.gif?raw=true)
